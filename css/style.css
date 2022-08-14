@@ -1,0 +1,139 @@
+@import "/css/reset.css";
+@import "/css/variables.css";
+
+/*Mobile 375px Desktop 1440px */
+
+body {
+  box-sizing: content-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--Very-Dark-Blue);
+  font-size: var(--Font-size);
+  font-family: var(--Font-family);
+}
+
+.welcome-page,
+.thank-you-page {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--Dark-Blue);
+  margin: 0 1.5rem;
+  padding: 1.5rem 1rem;
+  gap: 1.5rem;
+  border-radius: 1rem;
+}
+
+.star-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Darken-Blue);
+  width: fit-content;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.info-heading {
+  font-size: 1.25rem;
+  color: var(--White);
+  font-weight: var(--Font-weight-l);
+}
+
+.info {
+  line-height: 1.25rem;
+  color: var(--Medium-Grey);
+  font-weight: var(--Font-weight-s);
+}
+
+.rate-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rate-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Darken-Blue);
+  color: var(--Medium-Grey);
+  width: 2.5rem;
+  border: none;
+  border-radius: 50%;
+  padding: 0.75rem;
+}
+
+.rate-btn:focus {
+  background-color: var(--Light-Grey);
+  color: var(--White);
+}
+
+.submit-btn {
+  background-color: var(--Orange);
+  color: var(--White);
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 0;
+  font-weight: var(--Font-weight-l);
+  letter-spacing: 0.1rem;
+}
+
+.thank-you-page {
+  display: none;
+  align-items: center;
+}
+
+.rating {
+  background-color: var(--Darken-Blue);
+  color: var(--Orange);
+  padding: 0.5rem 0.75rem;
+  border-radius: 1rem;
+}
+
+.thank-you-info {
+  text-align: center;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  color: var(--Light-Grey);
+}
+
+.attribution > a {
+  text-decoration: none;
+  color: var(--Orange);
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    display: flex;
+    justify-content: center;
+  }
+
+  .welcome-page,
+  .thank-you-page {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .rate-btn {
+    transition: background-color 1s, color 0.5s;
+  }
+
+  .rate-btn:hover {
+    background-color: var(--Orange);
+    color: var(--White);
+  }
+
+  .submit-btn {
+    transition: background-color 1s, color 0.5s;
+  }
+
+  .submit-btn:hover {
+    background-color: var(--White);
+    color: var(--Orange);
+  }
+}
